@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 40%);
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+
+    @media (min-width: 480px) {
+      .subscribe-form {
+        flex-direction: row;
+      }
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1;
+      padding: 0.85rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(30, 41, 59, 0.6);
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.2s;
+    }
+
+    .subscribe-form input[type="email"]:focus {
+      border-color: var(--accent);
+    }
+
+    .subscribe-form button {
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--accent-hover);
+    }
+
+    .subscribe-form button:active {
+      transform: scale(0.98);
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <img src="assets/images/logo-1.png" alt="Brand Logo" class="logo">
+
+    <br>
+    <span class="badge">Something new is coming</span>
+    <h1>We're crafting our digital experience.</h1>
+    <p>Our website is currently under construction. Leave your email below to get notified the second we launch.</p>
+
+
+    <div class="footer-note">
+      <p> Geraldine Niño &copy; 2026 All rights reserved.</p>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,15 +1,18 @@
-@media (max-width: 768px) {
-    .hero-image {
-      width: 100%;
-      height: auto;
-    }
-    .container {
-      padding: 20px;
-    }
-  }
+/* ==========================================
+   1. GLOBAL & BODY STYLES
+   ========================================== */
+html, body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto !important; 
+    margin: 0;
+    padding: 0;
+}
 
-
-  /* Custom Hero Section Styles */
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
 .hero-section {
     position: relative;
     width: 100%;
@@ -17,18 +20,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
-    background: url(assets/images/cover-page.png) no-repeat;
+    background: url('assets/images/cover-page.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
-
 
 .hero-btn-container {
-    text-align: left; /* Aligns the button to the left side corner */
+    text-align: left; 
 }
 
-/* Base settings for the scrolling gallery sections */
+/* ==========================================
+   3. GALLERY SECTIONS (DESKTOP DEFAULT)
+   ========================================== */
 .gallery-section {
     position: relative;
     width: 100%;
@@ -36,13 +39,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
+    background-repeat: no-repeat;
+    background-position: center top;
     background-size: cover;
-    background-position: center;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
+.gallery-section .container {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 3rem !important;
+}
 
-/* .gallery-section::before {
+/* Disabled overlay comment preserved from original code:
+.gallery-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -51,24 +61,37 @@
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
     z-index: 1;
-} */
+} 
+*/
 
-.gallery-section .container {
-    position: relative;
-    z-index: 2;
-    padding-bottom: 3rem !important;
-}
-
+/* ==========================================
+   4. MOBILE RESPONSIVE FIXES (Max Width: 768px)
+   ========================================== */
 @media (max-width: 768px) {
-    .gallery-section {
-        background-attachment: scroll; /* Smoother performance on mobile web browsers */
-        min-height: 60vh; /* Adjusts height nicely for landscape views on small screens */
+    .hero-image {
+        width: 100%;
+        height: auto;
     }
-}
 
-html, body {
-    min-height: 100%;
-    overflow-x: hidden;
-    /* Ensure overflow-y isn't set to hidden anywhere */
-    overflow-y: auto !important; 
+    .container {
+        padding: 20px;
+    }
+
+    /* Fixes image shrinking and eliminates large empty gaps on mobile screens */
+    .hero-section,
+    .gallery-section {
+        min-height: auto !important;
+        background-attachment: scroll;
+        background-size: 100% 100% !important;
+        
+        /* 
+           Adjust this aspect ratio if your PNG slides are proportioned differently. 
+           (Width / Height of your graphic design image)
+        */
+        aspect-ratio: 16 / 9; 
+    }
+
+    .gallery-section .container {
+        padding-bottom: 1rem !important;
+    }
 }

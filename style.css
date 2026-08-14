@@ -1,6 +1,3 @@
-/* ==========================================
-   1. GLOBAL & BODY STYLES
-   ========================================== */
 html, body {
     min-height: 100%;
     width: 100%;
@@ -10,9 +7,6 @@ html, body {
     padding: 0;
 }
 
-/* ==========================================
-   2. HERO SECTION
-   ========================================== */
 .hero-section {
     position: relative;
     width: 100%;
@@ -29,9 +23,6 @@ html, body {
     text-align: left; 
 }
 
-/* ==========================================
-   3. GALLERY SECTIONS (DESKTOP DEFAULT)
-   ========================================== */
 .gallery-section {
     position: relative;
     width: 100%;
@@ -51,22 +42,6 @@ html, body {
     padding-bottom: 3rem !important;
 }
 
-/* Disabled overlay comment preserved from original code:
-.gallery-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
-    z-index: 1;
-} 
-*/
-
-/* ==========================================
-   4. MOBILE RESPONSIVE FIXES (Max Width: 768px)
-   ========================================== */
 @media (max-width: 768px) {
     .hero-image {
         width: 100%;
